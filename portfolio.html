@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <!-- boxicon link-->
+        <link rel="stylesheet"href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <!-- google fonts link-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+<style> *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Rubik Mono One", monospace;
+    list-style: none;
+    text-decoration: none;
+}  
+
+:root{
+    --bg-color:#1f1f21;
+    --text-color: #fff;
+    --main-color: #ffae00;
+
+    --big-color: 7rem;
+    --p-font: 1.1rem;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+    padding: 32px 15%;
+    background: transparent;
+    transition: all ease 0.45s;
+}
+
+.logo{
+    color: var(--text-color);
+    font-size: 41px;
+    font-weight: 600;
+}
+
+.logo span{
+    color: var(--main-color);
+}
+
+.navbar{
+    display: flex;
+}
+
+.navbar a{
+    font-size: var(--p-font);
+    font-weight: 100;
+    color: var(--text-color);
+    margin: 0 5px;
+    transition: all ease .50s;
+}
+
+.navbar a:hover{
+    color: var(--main-color);
+
+}
+.navbar a.active{
+    color: var(--main-color);
+
+}
+.menu-btn{
+    background: linear-gradient(130.08deg, #383528 0%, #191919 100%);
+    box-shadow: 0px 20px 40px #00000070;
+    border: 1px solid #3b3b3b;
+    padding: 10px 20px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+#menu-icon{
+    font-size: 28px;
+    margin-left: 10px;
+    z-index: 6;
+}
+
+section{
+    padding: 0 15%;
+}
+.home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    gap: 30px;
+}
+.home-img{
+    width: 730px;
+    height: 730px;
+}
+
+.home-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.home-text span{
+    padding: 5px 25px;
+    background: linear-gradient(130.08deg, #383528 0%, #191919 100%);
+    box-shadow: 0px 20px 40px #00000070;
+    border: 1px solid #3b3b3b;
+    border-radius: 100px;
+    color: var(--text-color);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.home-text h1{
+    color: white;
+    font-size: var(--big-color);
+    margin: 23px 0;
+}
+.home-text p{
+    font-size: var(--p-font);
+    font-weight: 400;
+    color: #c3c3c3;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+.btn{
+    display: inline-block;
+    padding: 14px 34px;
+    background: var(--main-color);
+    color: var(--text-color);
+    border: 2px solid var(--main-color);
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.6s ease-in-out;
+}
+.btn:hover{
+    transform: translateY(-5px);
+    background: transparent;
+    color: var(--main-color);
+}
+.two{
+    background: #141414;
+    border: 2px solid #141414;
+    color: var(--text-color);
+    margin-left: 25px;
+}
+.two:hover{
+    color: #141414;
+    background: var(--text-color);
+    border: 2px solid var(--text-color);
+}
+
+.share{
+    position: absolute;
+    bottom: 3rem;
+    left: 15%;
+    display: flex;
+    align-items: center;
+}
+
+.social img{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 45px;
+    background: linear-gradient(130.08deg, #383528 0%, #191919 100%);
+    box-shadow: 0px 20px 40px #00000070;
+    border: 1px solid #3b3b3b;
+    border-radius: 50%;
+    color: var(--text-color);
+    font-size: 20px;
+    margin: 0 7px;
+    transition: all .6s ease-in-out;
+}
+
+.social img:hover{
+    transform: translateY(-10px);
+}
+
+@media (max-width: 1850px){
+    header{
+        padding: 15px 8%;
+        transition: .2s;
+    }
+    section{
+        padding: 0 8%;
+        transition: .2s;
+    }
+    .share{
+        left: 8%;
+        transition: .2s;
+    }
+}
+@media (max-width: 1370px){
+    header{
+        padding: 15px 4%;
+        transition: .2s;
+    }
+    section{
+        padding: 0 4%;
+        transition: .2s;
+    }
+    .share{
+        left: 4%;
+        transition: .2s;
+    }
+    :root{
+        --big-color: 5.5rem;
+        --p-font: 1rem;
+        transition: .2s;
+    }
+}
+@media (max-width: 1020px){
+    .navbar a{
+        margin: 0 15px;
+    }
+    :root{
+        --big-color: 5rem;
+        --p-font: 1rem;
+        transition: .2s;
+    }
+}
+@media (max-width: 950px){
+    .share{
+        display: none;
+    }
+    section{
+        padding: 70px 4%;
+    }
+    header{
+        padding: 11px 4%;
+        background: #2d2d2d;
+    }
+    .home{
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .home-text{
+        order: 2;
+    }
+    .home-img{
+        margin: auto;
+        height: auto;
+        width: auto;
+    }
+    .home-img img{
+        max-width: 450px;
+        width: 100%;
+        height: auto;
+
+    }
+}
+
+.home-img img{
+    animation: img 2s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+@keyframes img{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-22px);
+    }
+    100%{
+        transform: translateY(-22px);
+    }
+}</style>
+</head>
+<body>
+
+     <!-- header Section-->
+     <header>
+       <a href="#" class="logo"> <span>J</span>EETU</a>
+
+    <ul class="navbar">
+        <li> <a href="#" class="active">Home</li>
+        <li> <a href="#">About</li>
+        <li> <a href="#">Services</li>
+        <li> <a href="#">Portfolio</li>
+        <li> <a href="#">Blog</li>
+        <li> <a href="#">Contacts</li>
+    </ul>
+
+    <div class="menu-btn">
+        <span>INTRO</span>
+        <div class="bx bx-menu" id="menu-icons"></div>
+    </div>
+     </header>
+
+     <!-- Home section-->
+     <section class="home">
+        <div class="home-text">
+            <span>Software Developer</span>
+            <h1>Jeetu</h1>
+            <p>I'm a Web Developer . I know HTML, CSS, JAVASCRIPT and more languages learnig Now. </p>
+        <div class="main-btn">
+            <a href="#" class="btn">Download CV</a>
+            <a href="#" class="btn two">Hire Me Now</a>
+        </div>
+        </div>
+        <div class="home-img">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFNtY5vLgA2ei1FYvSw9t0AurCUm2SdtB31N045MwqKpQ46dRd9Z4FA5ZQcLIg05zkz3TPjbE5UNRZTxGK9O0P6nDbYZ59mT6BH1_lwLNPz1ZO4OFAXEpEFIyBoacSHX3rIo8W6azkagQM6XnWMeQBCXbqVTnDibCEVxE6DJ3gHlg_ht5moLbxAeo8KR23/s600/profile-pic.png">
+        </div>
+     </section>
+     <div class="share">
+        <p>Check Out my:</p>
+        <div class="social">
+            <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAMRJREFUSEvtltENgzAMRI9NyibtJmWStpPQTYBJYJT2UCNZESQmNERIzg8fIL/c+YxcodCpCnFxevD159zkPVcN3aOYsAcAB3UQwutYC1PBFwDjSvGsYEIJXzrZwEtqewCDuMUzh9XsaScKqxT6F0np8R1AKwpR7S2m0MBaq0Mp9l18A2hi1ucAv77Qv6V6i+JiYCacSQ8erdWyiI2T/UBiuZrfW7g0Ntk4HTZOXH3kvsUNxK21mlYlp1pdPPRhyjidG/wBFwwxH4oeX7wAAAAASUVORK5CYII="/></a>
+            <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAWtJREFUSEvtlu1tAjEMhl8moUxSmIQySdtJCpNAJymj0AfFVQhO4vtQ+YMldOIu8fthx3cLPSgWD8LVE/jfnJ/L6g9JW0kvkk6SDul6Tkreiv9ujY+SdpJsU8sFgL5+k66dRRD4ToR4vMrXlIpJ9JPYRcAh6YHmGAj4TEIgc40SGEtQQLCoBW4ke31hzjUVwx4VecB271hPXd97qGkfAv7Ueoq5h9WoKYONZhkqosDsYe1NeF2dd2hLEOAewXJPCJga27GIJA04fe0TStVU7NU4kry1ZlPWd2iNxxCgHDfdbEm8GmMxnT2H1TQkiu+iNjJtInGdQsC1uWY192kyzugU0KrNLeA57K6qbQHzbAq4e3bzQkdeixwxzjb2R6LaUEOBeWlEQRkUDIxulIpRZ528HAAIkDuhagw8YGw1Al3maRyGVEasBthe8K+ZCxwR+/F1cTeDI0x7XR3NMWpdpKtHJe5tegL3HJrt+QXBlEMf+R+PgwAAAABJRU5ErkJggg=="/></a>
+            <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAATVJREFUSEvtljFuwkAQRR8HoExDFVrOkEhwDhQBoghHSAfcgg4iRWlzAkSU9Gkpk0PkAORHCxoPNga0lhHySCtL6915npm/O65RktVK4nJx4D5wAyyBryKykhbxJ3BnYA/AS2y4Bz8CMwdZA62iweM/wMRBfoF60eB74MNBXoFu0WD5HwFPQAN4A4aAoo5qF3eczo3uFtD4CSPTj49Ym1Zu9bMRnITXc+87ATYPT/v6HRikfUQa+Ns5XoTNmhZYyrc2TZnLhccAH1MWfVzimMYGq7YqlzelXCXZWSywnMp5Vjk037S1jgHeS2MQaNuFHR0s1UqA1qRwdThrNit7/Vj1OVXVCYcH0l2BE3WoUq105F2Zlbiybq+Dx0mb/I1je+u23/ru4+/m3HVX8wdyTIv8X1NaxBtPCGofbR6NigAAAABJRU5ErkJggg=="/></a>
+            <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAZtJREFUSEvllutNBDEMhH2dcJUAlXBUAlQCVwlQCXQC+6EEWY7tOKeTDolI+2MfznjGY2d3cqG1uxCu/HngGxH5bNdZRMoYX4nIwwZ2UEhvIvJukHm2nFQEDMPXRWokcBSRnkga7gHD9GMRVH8O8P2sLB7ws5H3lByQ/jYDt8AVti+tzmzOutvkpTTE6pWCrwAjISyi9djMqN8/bTc8H5YFjkxF9nsVjdNhaB2NIdlDL+K6Or/PvRpjLCubZmuZaTOVWVfNRV1xKsvbvPexZcv3bok8YG9jGwwA13VTxypkazrgVIHZKDRKSwJ36ymX1nkFuMuWTSdPLeIGg3nAZM0Qma0+t6l/d200B0pSey3FxkhNTT05NaMvJ+MSY+JsS+n62pGqezxirLviJ6/odMp6lbjuakD1aRTVeGipCJjMmUK6TWCt62kVzY7SMnA0KHpb9YFBYlzU3hsePbmhFWf/XJF0M8fb92Vz6UDAGQ6z6RQlUx6Z3gbIGJ27GfvwKJ1JHSVh6+nN7GzEnv2/uvwbfArjVWO53/8/4G/wLmkfoh4cZgAAAABJRU5ErkJggg=="/></a>
+            <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAcBJREFUSEvllk1OxDAMhT03gZMABwEBFwFOws9F+NmyZQ+cBPqN/JBJnTZtFhUi0qgznfg9+9lxvLON1m4jXvsTxAdmxmduPc1t4P+5iK/N7MjMjlvAfM+HP++HJ/bpqhFDdBsiFJieU35EJ9l/YmYjuxrxu5Mi280QcZN87o3SgeM4Aelh6WlGjMG5k+Ht0nXqKXxx1SC/M7OLCJQRK1q8bJE24kH64C8gwv4xizoj/nLDWhqQEkUoOoA/PSK+nw2yUlSsSyclkJHcJTigbCSnmcxU6VWiPcCqYpwC983MXh0PXPB+aqUkJh9IkxFHUgpOaSByyFi8L48QeOCuIpYSgP8CcEI5jDPkNp6CLmJFO6rOILtOQxl1F7FAiQbybNXS1EWcGhfs5BkHS1W6iDeTOhZXJrdkzoqvK2IAJSXfkfM59Gad7ew4qRNOHqepBqKOlTWQ2hnmfdqCa50rvVFChEhL48AZIkeBWl9PW3DWj1squPXGUnpmezWAquBav24lZZ+CaLoWkQ8DnmsGAQixXTwIyFDk/O4ZfcrevVdsatiL9+6SYU+Orhr2yjy2jrbYNc1nc+PtkkJatPf/EX8DIXGOHzTONr8AAAAASUVORK5CYII="/></a>
+        </div>
+     </div>
+
+     <script src="https://unpkg.com/scrollreveal"></script>
+    
+     <!-- Custom JS File link-->
+     <script>
+     let menu = document.querySelector('#menu-icon');
+        let navbar = document.querySelector('.navbar');
+        
+        menu.onclick = () =>{
+            menu.classList.toggle('bx-x');
+            navbar.classList.toggle('open')
+        };
+        
+        const sr= scrollReveal({
+            distance:'40px',
+            duration:2500,
+            reset: true,
+        })
+        
+        sr.reveal('.logo',{delay:200, origin:'left'});
+        sr.reveal('.navbar',{delay:400, origin: 'top'});</script>
+    
+    </body>
+</html>
